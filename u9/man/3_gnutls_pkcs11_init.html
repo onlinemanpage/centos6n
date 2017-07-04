@@ -1,0 +1,65 @@
+<!-- Creator     : groff version 1.18.1.4 -->
+<!-- CreationDate: Tue Jul  4 07:28:57 2017 -->
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta name="Content-Style" content="text/css">
+<title></title>
+</head>
+<body>
+
+<hr>
+
+<p>gnutls_pkcs11_init(3) gnutls gnutls_pkcs11_init(3)</p>
+
+<p>NAME gnutls_pkcs11_init - API function</p>
+
+<p>SYNOPSIS #include &lt;gnutls/gnutls.h&gt;</p>
+
+<p>int gnutls_pkcs11_init(unsigned int flags, const char *
+configfile);</p>
+
+<p>ARGUMENTS unsigned int flags GNUTLS_PKCS11_FLAG_MANUAL
+or GNUTLS_PKCS11_FLAG_AUTO</p>
+
+<p>const char * configfile either NULL or the location of a
+configuration file</p>
+
+<p>DESCRIPTION This function will initialize the PKCS 11
+subsystem in gnutls. It will read a configuration file if
+GNUTLS_PKCS11_FLAG_AUTO is used or allow you to
+independently load PKCS 11 modules using
+gnutls_pkcs11_add_provider() if GNUTLS_PKCS11_FLAG_MANUAL is
+specified.</p>
+
+<p>Normally you dont need to call this function since it is
+being called by gnutls_global_init() using the
+GNUTLS_PKCS11_FLAG_AUTO. If other option is required then it
+must be called before it.</p>
+
+<p>RETURNS On success, GNUTLS_E_SUCCESS is returned,
+otherwise a negative error value.</p>
+
+<p>REPORTING BUGS Report bugs to
+&lt;bug-gnutls@gnu.org&gt;. GnuTLS home page:
+http://www.gnu.org/software/gnutls/ General help using GNU
+software: http://www.gnu.org/gethelp/</p>
+
+<p>COPYRIGHT Copyright &copy; 2008 Free Software
+Foundation. Copying and distribution of this file, with or
+without modification, are permitted in any medium without
+royalty provided the copyright notice and this notice are
+preserved.</p>
+
+<p>SEE ALSO The full documentation for gnutls is maintained
+as a Texinfo manual. If the info and gnutls programs are
+properly installed at your site, the command</p>
+
+<p>info gnutls</p>
+
+<p>should give you access to the complete manual.</p>
+
+<p>gnutls 2.12.6.1 gnutls_pkcs11_init(3)</p>
+<hr>
+</body>
+</html>

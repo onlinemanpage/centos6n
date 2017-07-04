@@ -1,0 +1,66 @@
+<!-- Creator     : groff version 1.18.1.4 -->
+<!-- CreationDate: Tue Jul  4 07:28:58 2017 -->
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta name="Content-Style" content="text/css">
+<title></title>
+</head>
+<body>
+
+<hr>
+
+<p>gnutls_pkcs11_obj_get_info(3) gnutls
+gnutls_pkcs11_obj_get_info(3)</p>
+
+<p>NAME gnutls_pkcs11_obj_get_info - API function</p>
+
+<p>SYNOPSIS #include &lt;gnutls/gnutls.h&gt;</p>
+
+<p>int gnutls_pkcs11_obj_get_info(gnutls_pkcs11_obj_t crt,
+gnutls_pkcs11_obj_info_t itype, void * output, size_t *
+output_size);</p>
+
+<p>ARGUMENTS gnutls_pkcs11_obj_t crt should contain a
+gnutls_pkcs11_obj_t structure</p>
+
+<p>gnutls_pkcs11_obj_info_t itype Denotes the type of
+information requested</p>
+
+<p>void * output where output will be stored</p>
+
+<p>size_t * output_size contains the maximum size of the
+output and will be over- written with actual</p>
+
+<p>DESCRIPTION This function will return information about
+the PKCS 11 certificatesuch as the label, id as well as
+token information where the key is stored. When output is
+text it returns null terminated string although out-
+put_size contains the size of the actual data only.</p>
+
+<p>RETURNS zero on success or a negative value on
+error.</p>
+
+<p>REPORTING BUGS Report bugs to
+&lt;bug-gnutls@gnu.org&gt;. GnuTLS home page:
+http://www.gnu.org/software/gnutls/ General help using GNU
+software: http://www.gnu.org/gethelp/</p>
+
+<p>COPYRIGHT Copyright &copy; 2008 Free Software
+Foundation. Copying and distribution of this file, with or
+without modification, are permitted in any medium without
+royalty provided the copyright notice and this notice are
+preserved.</p>
+
+<p>SEE ALSO The full documentation for gnutls is maintained
+as a Texinfo manual. If the info and gnutls programs are
+properly installed at your site, the command</p>
+
+<p>info gnutls</p>
+
+<p>should give you access to the complete manual.</p>
+
+<p>gnutls 2.12.6.1 gnutls_pkcs11_obj_get_info(3)</p>
+<hr>
+</body>
+</html>

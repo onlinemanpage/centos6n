@@ -1,0 +1,114 @@
+<!-- Creator     : groff version 1.18.1.4 -->
+<!-- CreationDate: Tue Jul  4 07:29:07 2017 -->
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta name="Content-Style" content="text/css">
+<title></title>
+</head>
+<body>
+
+<hr>
+
+<p>gnutls_priority_init(3) gnutls
+gnutls_priority_init(3)</p>
+
+<p>NAME gnutls_priority_init - API function</p>
+
+<p>SYNOPSIS #include &lt;gnutls/gnutls.h&gt;</p>
+
+<p>int gnutls_priority_init(gnutls_priority_t *
+priority_cache, const char * priorities, const char **
+err_pos);</p>
+
+<p>ARGUMENTS gnutls_priority_t * priority_cache is a
+gnutls_prioritity_t structure.</p>
+
+<p>const char * priorities is a string describing
+priorities</p>
+
+<p>const char ** err_pos In case of an error this will have
+the position in the string the error occured</p>
+
+<p>DESCRIPTION Sets priorities for the ciphers, key
+exchange methods, macs and com- pression methods.</p>
+
+<p>The priorities option allows you to specify a colon
+separated list of the cipher priorities to enable.</p>
+
+<p>COMMON KEYWORDS Some keywords are defined to provide
+quick access to common prefer- ences.</p>
+
+<p>&quot;PERFORMANCE&quot; means all the &quot;secure&quot;
+ciphersuites are enabled, limited to 128 bit ciphers and
+sorted by terms of speed performance.</p>
+
+<p>&quot;NORMAL&quot; means all &quot;secure&quot;
+ciphersuites. The 256-bit ciphers are included as a fallback
+only. The ciphers are sorted by security mar- gin.</p>
+
+<p>&quot;SECURE128&quot; means all &quot;secure&quot;
+ciphersuites with ciphers up to 128 bits, sorted by security
+margin.</p>
+
+<p>&quot;SECURE256&quot; means all &quot;secure&quot;
+ciphersuites including the 256 bit ciphers, sorted by
+security margin.</p>
+
+<p>&quot;EXPORT&quot; means all ciphersuites are enabled,
+including the low-security 40 bit ciphers.</p>
+
+<p>&quot;NONE&quot; means nothing is enabled. This disables
+even protocols and com- pression methods.</p>
+
+<p>SPECIAL KEYWORDS &quot;!&quot; or &quot;-&quot; appended
+with an algorithm will remove this algorithm.</p>
+
+<p>&quot;+&quot; appended with an algorithm will add this
+algorithm.</p>
+
+<p>Check the GnuTLS manual section &quot;Priority
+strings&quot; for detailed infor- mation.</p>
+
+<p>EXAMPLES
+&quot;NONE:+VERS-TLS-ALL:+MAC-ALL:+RSA:+AES-128-CBC:+SIGN-ALL:+COMP-NULL&quot;</p>
+
+<p>&quot;NORMAL:-ARCFOUR-128&quot; means normal ciphers
+except for ARCFOUR-128.</p>
+
+<p>&quot;SECURE:-VERS-SSL3.0:+COMP-DEFLATE&quot; means that
+only secure ciphers are enabled, SSL3.0 is disabled, and
+libz compression enabled.</p>
+
+
+<p>&quot;NONE:+VERS-TLS-ALL:+AES-128-CBC:+RSA:+SHA1:+COMP-NULL:+SIGN-RSA-SHA1&quot;,</p>
+
+<p>&quot;NORMAL:COMPAT&quot; is the most compatible
+mode.</p>
+
+<p>RETURNS On syntax error GNUTLS_E_INVALID_REQUEST is
+returned, GNUTLS_E_SUCCESS on success, or an error code.</p>
+
+<p>REPORTING BUGS Report bugs to
+&lt;bug-gnutls@gnu.org&gt;. GnuTLS home page:
+http://www.gnu.org/software/gnutls/ General help using GNU
+software: http://www.gnu.org/gethelp/</p>
+
+<p>COPYRIGHT Copyright &copy; 2008 Free Software
+Foundation. Copying and distribution of this file, with or
+without modification, are permitted in any medium without
+royalty provided the copyright notice and this notice are
+preserved.</p>
+
+<p>SEE ALSO The full documentation for gnutls is maintained
+as a Texinfo manual. If the info and gnutls programs are
+properly installed at your site, the command</p>
+
+<p>info gnutls</p>
+
+<p>should give you access to the complete manual.</p>
+
+<p>gnutls 2.12.6.1 gnutls_priority_init(3)</p>
+<hr>
+</body>
+</html>

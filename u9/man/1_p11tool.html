@@ -1,0 +1,114 @@
+<!-- Creator     : groff version 1.18.1.4 -->
+<!-- CreationDate: Tue Jul  4 07:34:30 2017 -->
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta name="Content-Style" content="text/css">
+<title></title>
+</head>
+<body>
+
+<hr>
+
+<p>p11tool(1) p11tool(1)</p>
+
+<p>NAME p11tool - Manipulate PKCS #11 tokens.</p>
+
+<p>SYNOPSIS p11tool [options]</p>
+
+<p>DESCRIPTION Export/import data from PKCS #11 tokens. To
+use PKCS #11 tokens with gnutls the configuration file
+/etc/gnutls/pkcs11.conf has to exist and contain a number of
+lines of the form
+&quot;load=/usr/lib/opensc-pkcs11.so&quot;.</p>
+
+<p>OPTIONS Program control options -d, --debug LEVEL
+Specify the debug level. Default is 1.</p>
+
+<p>-h, --help Shows this help text</p>
+
+<p>Generic options --login Force login to the token for the
+intended operation.</p>
+
+<p>--provider MODULE In addition to
+/etc/gnutls/pkcs11.conf, load the specified mod- ule.</p>
+
+<p>--outfile FILE Print output to FILE.</p>
+
+<p>--inder, --inraw Input is DER formatted.</p>
+
+<p>Getting information on available X.509 certificates
+--list-tokens Prints all available tokens.</p>
+
+<p>--initialize URL Initializes (formats) the specified by
+the URL token. Note that several tokens do not support this
+fascility.</p>
+
+<p>Getting information on available X.509 certificates
+--list-all-certs Prints all available certificates.</p>
+
+<p>--list-certs Prints all certificates that have a
+corresponding private key stored in the token.</p>
+
+<p>--list-trusted Prints all certificates that have been
+marked as trusted.</p>
+
+<p>Getting information on private keys --list-privkeys
+Prints all available private keys.</p>
+
+<p>Handling generic objects --export URL Exports the object
+(e.g. certificate) specified by the URL.</p>
+
+<p>--delete URL Deletes the object specified by the URL.
+Note that several tokens do not support deletion.</p>
+
+<p>--detailed-url When printing URLs print them in a
+detailed (to the PKCS #11 module used) form.</p>
+
+<p>--no-detailed-url When printing URLs, do not print
+details on the module used.</p>
+
+<p>Storing objects --write URL Flag to set when writing an
+object. Requires one of --load-privkey, --load-pubkey,
+--load-certificate or --secret-key options.</p>
+
+<p>--load-privkey Load a private key for the write
+operations.</p>
+
+<p>--load-pubkey Load an X.509 subjectPublicKey for the
+write operation.</p>
+
+<p>--load-certificate Load an X.509 certificate for the
+write operation.</p>
+
+<p>--secret-key Specify a hex encoded secret key for the
+write operation.</p>
+
+<p>--trusted The object stored will be marked as
+trusted.</p>
+
+<p>--label The label of the object stored.</p>
+
+<p>Controlling output -8, --pkcs8 Use PKCS #8 format for
+private keys.</p>
+
+<p>EXAMPLES To store a private key and certificate,
+run:</p>
+
+<p>$ p11tool --login --write &quot;pkcs11:XXX&quot;
+--load-privkey key.pem --label &quot;MyKey&quot; $ p11tool
+--login --write &quot;pkcs11:XXX&quot; --load-certificate
+cert.pem --label &quot;MyCert&quot;</p>
+
+<p>To view all objects in a token, use:</p>
+
+<p>$ p11tool --login --list-all</p>
+
+<p>AUTHOR Nikos Mavrogiannopoulos &lt;nmav@gnutls.org&gt;
+and others; see /usr/share/doc/gnutls-bin/AUTHORS for a
+complete list.</p>
+
+<p>November 11th 2010 p11tool(1)</p>
+<hr>
+</body>
+</html>

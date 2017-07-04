@@ -1,0 +1,61 @@
+<!-- Creator     : groff version 1.18.1.4 -->
+<!-- CreationDate: Tue Jul  4 07:29:00 2017 -->
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta name="Content-Style" content="text/css">
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p>gnutls_pkcs11_token_get_mechanism(3)gnutlsgnutls_pkcs11_token_get_mechanism(3)</p>
+
+<p>NAME gnutls_pkcs11_token_get_mechanism - API
+function</p>
+
+<p>SYNOPSIS #include &lt;gnutls/gnutls.h&gt;</p>
+
+<p>int gnutls_pkcs11_token_get_mechanism(const char * url,
+int idx, unsigned long * mechanism);</p>
+
+<p>ARGUMENTS const char * url should contain a PKCS 11
+URL</p>
+
+<p>int idx The index of the mechanism</p>
+
+<p>unsigned long * mechanism The PKCS 11 mechanism ID</p>
+
+<p>DESCRIPTION This function will return the names of the
+supported mechanisms by the token. It should be called with
+an increasing index until it return
+GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE.</p>
+
+<p>RETURNS zero on success or a negative value on
+error.</p>
+
+<p>REPORTING BUGS Report bugs to
+&lt;bug-gnutls@gnu.org&gt;. GnuTLS home page:
+http://www.gnu.org/software/gnutls/ General help using GNU
+software: http://www.gnu.org/gethelp/</p>
+
+<p>COPYRIGHT Copyright &copy; 2008 Free Software
+Foundation. Copying and distribution of this file, with or
+without modification, are permitted in any medium without
+royalty provided the copyright notice and this notice are
+preserved.</p>
+
+<p>SEE ALSO The full documentation for gnutls is maintained
+as a Texinfo manual. If the info and gnutls programs are
+properly installed at your site, the command</p>
+
+<p>info gnutls</p>
+
+<p>should give you access to the complete manual.</p>
+
+<p>gnutls 2.12.6.gnutls_pkcs11_token_get_mechanism(3)</p>
+<hr>
+</body>
+</html>

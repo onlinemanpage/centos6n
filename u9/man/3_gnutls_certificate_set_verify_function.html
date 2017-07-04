@@ -1,0 +1,74 @@
+<!-- Creator     : groff version 1.18.1.4 -->
+<!-- CreationDate: Tue Jul  4 07:28:28 2017 -->
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta name="Content-Style" content="text/css">
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p>gnutls_certificate_set_verify_functiggnutls_certificate_set_verify_function(3)</p>
+
+<p>NAME gnutls_certificate_set_verify_function - API
+function</p>
+
+<p>SYNOPSIS #include &lt;gnutls/gnutls.h&gt;</p>
+
+<p>void
+gnutls_certificate_set_verify_function(gnutls_certificate_creden-
+tials_t cred, gnutls_certificate_verify_function *
+func);</p>
+
+<p>ARGUMENTS gnutls_certificate_credentials_t cred is a
+gnutls_certificate_credentials_t structure.</p>
+
+<p>gnutls_certificate_verify_function * func is the
+callback function</p>
+
+<p>DESCRIPTION This function sets a callback to be called
+when peers certificate has been received in order to verify
+it on receipt rather than doing after the handshake is
+completed.</p>
+
+<p>The callback s function prototype is: int
+(*callback)(gnutls_ses- sion_t);</p>
+
+<p>If the callback function is provided then gnutls will
+call it, in the handshake, just after the certificate
+message has been received. To verify or obtain the
+certificate the gnutls_certificate_ver- ify_peers2(),
+gnutls_certificate_type_get(), gnutls_certifi-
+cate_get_peers() functions can be used.</p>
+
+<p>The callback function should return 0 for the handshake
+to continue or non-zero to terminate.</p>
+
+<p>SINCE 2.10.0</p>
+
+<p>REPORTING BUGS Report bugs to
+&lt;bug-gnutls@gnu.org&gt;. GnuTLS home page:
+http://www.gnu.org/software/gnutls/ General help using GNU
+software: http://www.gnu.org/gethelp/</p>
+
+<p>COPYRIGHT Copyright &copy; 2008 Free Software
+Foundation. Copying and distribution of this file, with or
+without modification, are permitted in any medium without
+royalty provided the copyright notice and this notice are
+preserved.</p>
+
+<p>SEE ALSO The full documentation for gnutls is maintained
+as a Texinfo manual. If the info and gnutls programs are
+properly installed at your site, the command</p>
+
+<p>info gnutls</p>
+
+<p>should give you access to the complete manual.</p>
+
+<p>gnutls 2.gnutls_certificate_set_verify_function(3)</p>
+<hr>
+</body>
+</html>
